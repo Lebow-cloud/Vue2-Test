@@ -1,0 +1,28 @@
+h1 {
+  color: red;
+}
+
+#canvas {
+  width: 600px;
+  padding: 200px 20px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+#cuadrao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+#right {
+  margin-right: 500px;
+}
+
+
+.darkMode{
+    background-color: black;
+}
