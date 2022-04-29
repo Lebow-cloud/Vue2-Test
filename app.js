@@ -16,6 +16,13 @@ var app = new Vue({
     nearby: false,
     error: false,
     success: false,
+    nameFor:"jack",
+    characters:["Mario", "Luigi", "Yoshi","Bowser"],
+    ninjas:[
+      {name:"Ryu", age:25},
+      {name:"Yoshi", age:35},
+      {name:"Ken", age:55}
+    ]
   },
   methods: {
     greet: function (el) {
