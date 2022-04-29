@@ -22,7 +22,8 @@ var app = new Vue({
       {name:"Ryu", age:25},
       {name:"Yoshi", age:35},
       {name:"Ken", age:55}
-    ]
+    ],
+    health: 100
   },
   methods: {
     greet: function (el) {
@@ -51,6 +52,12 @@ var app = new Vue({
          this.mode = !this.mode
          if(mode = false) modeOn = "Dark Mode"
          console.log(modeOn);
+    },
+    punch: function(){
+      this.health -= 10
+    },
+    restart: function(){
+      this.health = 100
     }
 
   },
