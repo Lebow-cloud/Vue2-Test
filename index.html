@@ -86,15 +86,15 @@
 
             <div>
               <!-- BAG IMAGE -->
-              <div id="bag"></div>
+              <div id="bag" :class="{burst: ended}"></div>
               <!-- BAR HEALTH -->
               <div id="bag-health">
-                <div></div>
+                <div v-bind:style="{width: health + '%'}" ></div>
               </div>
               <!-- GAME CONTROLS -->
               <div id="controls">
-                <button>Punch</button>
-                <button>Restart</button>
+                <button @click="punch" v-show="!ended">Punch</button>
+                <button @click="restart" >Restart</button>
               </div>
             </div>
 

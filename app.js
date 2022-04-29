@@ -23,7 +23,8 @@ var app = new Vue({
       {name:"Yoshi", age:35},
       {name:"Ken", age:55}
     ],
-    health: 100
+    health: 100,
+    ended: false
   },
   methods: {
     greet: function (el) {
@@ -55,10 +56,14 @@ var app = new Vue({
     },
     punch: function(){
       this.health -= 10
+      if(this.health <= 0) this.ended = true;
+      console.log(this.health)
     },
     restart: function(){
-      this.health = 100
-    }
+      this.health = 100;
+      this.ended = false;
+    },
+    
 
   },
   computed: {
